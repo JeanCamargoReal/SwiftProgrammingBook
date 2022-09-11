@@ -3,5 +3,7 @@
     <pages>
         <page name='Closure Expression Syntax'/>
         <page name='Functions as Arguments'/>
+        <page name='Closures Capture Their Enclosing Scope'/>
+        <page name='Map, Filter, Reduce'/>
     </pages>
 </playground>
