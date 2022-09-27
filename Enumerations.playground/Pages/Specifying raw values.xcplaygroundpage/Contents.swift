@@ -12,3 +12,4 @@ TextAlignment.right.rawValue
 TextAlignment.center.rawValue
 TextAlignment.justify.rawValue
 alignment.rawValue
+

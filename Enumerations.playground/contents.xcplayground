@@ -4,5 +4,6 @@
         <page name='Basic Enumerations'/>
         <page name='Using raw values'/>
         <page name='Specifying raw values'/>
+        <page name='Converting raw values to enym types'/>
     </pages>
 </playground>
