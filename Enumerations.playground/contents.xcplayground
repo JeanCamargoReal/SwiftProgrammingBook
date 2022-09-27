@@ -5,5 +5,7 @@
         <page name='Using raw values'/>
         <page name='Specifying raw values'/>
         <page name='Converting raw values to enym types'/>
+        <page name='Creating an enum with strings'/>
+        <page name='Using default string raw values'/>
     </pages>
 </playground>
