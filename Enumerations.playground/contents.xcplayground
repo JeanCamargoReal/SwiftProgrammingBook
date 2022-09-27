@@ -7,5 +7,6 @@
         <page name='Converting raw values to enym types'/>
         <page name='Creating an enum with strings'/>
         <page name='Using default string raw values'/>
+        <page name='Method associated with enum'/>
     </pages>
 </playground>
