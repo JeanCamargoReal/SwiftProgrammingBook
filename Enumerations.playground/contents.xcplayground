@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='Basic Enumerations'/>
-        <page name='Using raw values'/>
-        <page name='Specifying raw values'/>
-        <page name='Converting raw values to enym types'/>
-        <page name='Creating an enum with strings'/>
-        <page name='Using default string raw values'/>
-        <page name='Method associated with enum'/>
+        <page name='Basic_Enumerations'/>
+        <page name='Using_raw_values'/>
+        <page name='Specifying_raw_values'/>
+        <page name='Converting_raw_values_to_enum _types'/>
+        <page name='Creating_an_enum_with_strings'/>
+        <page name='Using_default_string_raw_values'/>
+        <page name='Method_associated_with_enum'/>
+        <page name='Associated_values'/>
     </pages>
 </playground>
