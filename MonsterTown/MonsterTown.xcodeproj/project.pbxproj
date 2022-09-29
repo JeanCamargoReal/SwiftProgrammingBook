@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C56EC2FD28E4B01D00387A1A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EC2FC28E4B01D00387A1A /* main.swift */; };
 		C56EC30428E4BEA100387A1A /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EC30328E4BEA100387A1A /* Town.swift */; };
+		C56EC30628E4DF2900387A1A /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EC30528E4DF2900387A1A /* Monster.swift */; };
+		C56EC30828E6152100387A1A /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EC30728E6152100387A1A /* Zombie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		C56EC2F928E4B01D00387A1A /* MonsterTown */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MonsterTown; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56EC2FC28E4B01D00387A1A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C56EC30328E4BEA100387A1A /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		C56EC30528E4DF2900387A1A /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		C56EC30728E6152100387A1A /* Zombie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				C56EC2FC28E4B01D00387A1A /* main.swift */,
+				C56EC30728E6152100387A1A /* Zombie.swift */,
 				C56EC30328E4BEA100387A1A /* Town.swift */,
+				C56EC30528E4DF2900387A1A /* Monster.swift */,
 			);
 			path = MonsterTown;
 			sourceTree = "<group>";
@@ -124,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C56EC2FD28E4B01D00387A1A /* main.swift in Sources */,
+				C56EC30828E6152100387A1A /* Zombie.swift in Sources */,
+				C56EC30628E4DF2900387A1A /* Monster.swift in Sources */,
 				C56EC30428E4BEA100387A1A /* Town.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
