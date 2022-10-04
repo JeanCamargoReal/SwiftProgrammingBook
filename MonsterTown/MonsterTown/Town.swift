@@ -8,7 +8,11 @@
 import Foundation
 
 struct Town {
-    var population = 5_422
+    var population = 5_422 {
+        didSet(oldPopulation) {
+            print("The popularion has changed to \(population) from \(oldPopulation).")
+        }
+    }
     var numberOfStoplights = 4
     
     enum Size {
