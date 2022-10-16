@@ -8,6 +8,10 @@
 import Foundation
 
 class Zombie: Monster {
+    class var spookyNoise: String {
+        return "Brains..."
+    }
+
     var walksWithLimp = true
 
     func regenerate() {
