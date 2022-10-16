@@ -8,6 +8,8 @@
 import Foundation
 
 struct Town {
+    static let world = "Earth"
+
     var population = 5_422 {
         didSet(oldPopulation) {
             print("The popularion has changed to \(population) from \(oldPopulation).")
