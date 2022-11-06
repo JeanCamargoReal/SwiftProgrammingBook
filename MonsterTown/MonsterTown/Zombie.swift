@@ -8,7 +8,11 @@
 import Foundation
 
 class Zombie: Monster {
-    class var spookyNoise: String {
+    class func makeSpookyNoise() -> String {
+        return "Brains ..."
+    }
+
+    override class var spookyNoise: String {
         return "Brains..."
     }
 

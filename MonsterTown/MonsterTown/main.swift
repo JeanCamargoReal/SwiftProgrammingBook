@@ -26,3 +26,9 @@ print("Victim pool: \(fredTheZombie.victimPool)")
 fredTheZombie.victimPool = 500
 
 print("Victim pool: \(fredTheZombie.victimPool)")
+
+print(Zombie.spookyNoise)
+
+if Zombie.isTerrifying {
+    print("Run away!")
+}
