@@ -17,14 +17,16 @@ class Zombie: Monster {
     }
 
     var walksWithLimp = true
+    private var isFallingApart = false
 
     func regenerate() {
         walksWithLimp = false
     }
 
     override func terrorizeTown() {
-        town?.changePopulation(by: -10)
-
+        if !isFallingApart {
+            town?.changePopulation(by: -10)
+        }
         super.terrorizeTown()
 
         regenerate()
