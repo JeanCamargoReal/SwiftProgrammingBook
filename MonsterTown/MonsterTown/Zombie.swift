@@ -17,7 +17,7 @@ class Zombie: Monster {
     }
 
     var walksWithLimp = true
-    private var isFallingApart = false
+    private(set) var isFallingApart = false
 
     func regenerate() {
         walksWithLimp = false
