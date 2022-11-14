@@ -18,12 +18,16 @@ struct Town {
     }
     var numberOfStoplights: Int
 
-    init(region: String, population: Int, numberOfStoplights: Int) {
+    init(region: String, population: Int, stoplights: Int) {
         self.region = region
         self.population = population
-        self.numberOfStoplights = numberOfStoplights
+        numberOfStoplights = stoplights
     }
-    
+
+    init(population: Int, stoplights: Int) {
+        self.init(region: "N/A", population: population, stoplights: stoplights)
+    }
+
     enum Size {
         case small
         case medium
