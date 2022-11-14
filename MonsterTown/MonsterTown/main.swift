@@ -7,9 +7,7 @@
 
 import Foundation
 
-var myTown = Town(region: "West",
-                  population: 10_000,
-                  stoplights: 6)
+var myTown = Town(population: 10_000, stoplights: 6)
 
 myTown.printDescription()
 
