@@ -25,9 +25,9 @@ class Monster {
         }
     }
 
-    init(town: Town?, name: String) {
+    init(town: Town?, monsterName: String) {
         self.town = town
-        self.name = name
+        name = monsterName
     }
 
     func terrorizeTown() {

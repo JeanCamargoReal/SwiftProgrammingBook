@@ -16,8 +16,14 @@ class Zombie: Monster {
         return "Brains..."
     }
 
-    var walksWithLimp = true
-    private(set) var isFallingApart = false
+    var walksWithLimp: Bool
+    private(set) var isFallingApart: Bool
+
+    init(limp: Bool, fallingApart: Bool, town: Town?, monsterName: String) {
+        walksWithLimp = limp
+        isFallingApart = fallingApart
+        super.init(town: town, monsterName: monsterName)
+    }
 
     func regenerate() {
         walksWithLimp = false
