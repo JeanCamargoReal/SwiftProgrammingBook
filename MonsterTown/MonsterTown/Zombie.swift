@@ -8,6 +8,7 @@
 import Foundation
 
 class Zombie: Monster {
+
     class func makeSpookyNoise() -> String {
         return "Brains ..."
     }
@@ -26,6 +27,10 @@ class Zombie: Monster {
         super.init(town: town, monsterName: monsterName)
     }
 
+	deinit {
+		print("Zombie \(name) is no longer with us")
+	}
+
     convenience init(limp: Bool, fallingApart: Bool) {
         self.init(limp: limp, fallingApart: fallingApart, town: nil, monsterName: "Fred")
 
@@ -33,6 +38,13 @@ class Zombie: Monster {
             print("This zombie has a bad knee.")
         }
     }
+
+	required init(town: Town?, monsterName: String) {
+		walksWithLimp = false
+		isFallingApart = false
+
+		super.init(town: town, monsterName: monsterName)
+	}
 
     func regenerate() {
         walksWithLimp = false
