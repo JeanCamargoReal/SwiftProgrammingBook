@@ -26,6 +26,8 @@ fredTheZombie.town = myTown
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
 
+var convenientZombie = Zombie(limp: true, fallingApart: false)
+
 print("Victim pool: \(fredTheZombie.victimPool)")
 
 fredTheZombie.victimPool = 500

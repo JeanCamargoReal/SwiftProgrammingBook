@@ -30,7 +30,7 @@ class Zombie: Monster {
         self.init(limp: limp, fallingApart: fallingApart, town: nil, monsterName: "Fred")
 
         if walksWithLimp {
-            print("This zombie has a had knee.")
+            print("This zombie has a bad knee.")
         }
     }
 
