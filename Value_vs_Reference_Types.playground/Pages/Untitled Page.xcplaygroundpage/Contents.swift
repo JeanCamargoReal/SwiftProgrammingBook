@@ -30,3 +30,11 @@ let mel = Employee()
 
 mel.id = 86
 mel.id
+
+acme.boss.id
+
+let widgetCo = acme
+
+anika.id = 15
+
+widgetCo.boss.id
