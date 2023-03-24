@@ -28,3 +28,5 @@ let acme = Company(boss: anika)
 
 let mel = Employee()
 
+mel.id = 86
+mel.id
