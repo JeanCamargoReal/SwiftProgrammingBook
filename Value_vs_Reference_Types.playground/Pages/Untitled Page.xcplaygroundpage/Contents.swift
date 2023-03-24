@@ -28,4 +28,3 @@ let acme = Company(boss: anika)
 
 let mel = Employee()
 
-acme.boss = mel
