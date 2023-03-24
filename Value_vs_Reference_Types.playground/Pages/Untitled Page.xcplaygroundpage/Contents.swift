@@ -20,3 +20,12 @@ anika.id = 16
 anika.id
 theBoss.id
 
+struct Company {
+	var boss: Employee
+}
+
+let acme = Company(boss: anika)
+
+let mel = Employee()
+
+acme.boss = mel
