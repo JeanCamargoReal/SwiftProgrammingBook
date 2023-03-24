@@ -14,4 +14,9 @@ class Employee {
 }
 
 let anika = Employee()
+let theBoss = anika
+
+anika.id = 16
+anika.id
+theBoss.id
 
