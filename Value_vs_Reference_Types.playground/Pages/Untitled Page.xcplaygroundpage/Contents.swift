@@ -38,3 +38,7 @@ let widgetCo = acme
 anika.id = 15
 
 widgetCo.boss.id
+
+let juampa = Employee()
+
+let employees = [anika, mel, juampa]
