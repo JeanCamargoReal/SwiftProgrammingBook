@@ -4,9 +4,13 @@ func printTable(_ data: [[String]], withColumnLabels columnLabels: [String]) {
 	// Create header row containing column headers
 	var headerRow = "|"
 
+	// Also keep track of the width of each column
+	var columnWidths = [Int]()
+
 	for columnLabel in columnLabels {
 		let columnHeader = " \(columnLabel) |"
 		headerRow += columnHeader
+		columnWidths.append(columnLabel.count)
 	}
 
 	print(headerRow)
@@ -16,8 +20,11 @@ func printTable(_ data: [[String]], withColumnLabels columnLabels: [String]) {
 		var out = "|"
 
 		// Append each item in this row to the string
-		for item in row {
-			out += " \(item) |"
+		for (j, item) in row.enumerated() {
+			let paddingNeeded = columnWidths[j] - item.count
+			let padding = repeatElement(" ", count: paddingNeeded).joined(separator: "")
+
+			out += " \(padding)\(item) |"
 		}
 
 		// Done - print int!
