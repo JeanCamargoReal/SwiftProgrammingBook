@@ -1,6 +1,16 @@
 import UIKit
 
-func printTable(_ data: [[String]]) {
+func printTable(_ data: [[String]], withColumnLabels columnLabels: [String]) {
+	// Create header row containing column headers
+	var headerRow = "|"
+
+	for columnLabel in columnLabels {
+		let columnHeader = " \(columnLabel) |"
+		headerRow += columnHeader
+	}
+
+	print(headerRow)
+
 	for row in data {
 		// Start the output string
 		var out = "|"
@@ -21,4 +31,4 @@ let data = [
 	["Amit", "50", "20"]
 ]
 
-printTable(data)
+printTable(data, withColumnLabels: ["Employee Name", "Age", "Years of Experience"])
