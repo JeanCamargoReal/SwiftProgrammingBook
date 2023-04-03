@@ -1,7 +1,7 @@
 import UIKit
 
 protocol TabularDataSource {
-	var numerOfRows: Int { get }
+	var numberOfRows: Int { get }
 	var numberOfColumns: Int { get }
 
 	func label(forColumn column: Int) -> String
@@ -9,27 +9,30 @@ protocol TabularDataSource {
 	func itemFor(row: Int, column: Int) -> String
 }
 
-func printTable(_ data: [[String]], withColumnLabels columnLabels: [String]) {
+func printTable(_ dataSource: TabularDataSource) {
 	// Create header row containing column headers
 	var headerRow = "|"
 
 	// Also keep track of the width of each column
 	var columnWidths = [Int]()
 
-	for columnLabel in columnLabels {
+	for i in 0 ..< dataSource.numberOfColumns {
+		let columnLabel = dataSource.label(forColumn: i)
 		let columnHeader = " \(columnLabel) |"
+
 		headerRow += columnHeader
 		columnWidths.append(columnLabel.count)
 	}
 
 	print(headerRow)
 
-	for row in data {
+	for i in 0 ..< dataSource.numberOfRows {
 		// Start the output string
 		var out = "|"
 
 		// Append each item in this row to the string
-		for (j, item) in row.enumerated() {
+		for j in 0 ..< dataSource.numberOfColumns {
+			let item = dataSource.itemFor(row: i, column: j)
 			let paddingNeeded = columnWidths[j] - item.count
 			let padding = repeatElement(" ", count: paddingNeeded).joined(separator: "")
 
@@ -60,7 +63,7 @@ struct Department: TabularDataSource {
 		people.append(person)
 	}
 
-	var numerOfRows: Int {
+	var numberOfRows: Int {
 		return people.count
 	}
 
