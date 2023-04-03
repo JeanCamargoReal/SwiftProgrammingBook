@@ -1,5 +1,14 @@
 import UIKit
 
+protocol TabularDataSource {
+	var numerOfRows: Int { get }
+	var numberOfColumns: Int { get }
+
+	func label(forColumn column: Int) -> String
+
+	func itemFor(row: Int, column: Int) -> String
+}
+
 func printTable(_ data: [[String]], withColumnLabels columnLabels: [String]) {
 	// Create header row containing column headers
 	var headerRow = "|"
@@ -32,10 +41,27 @@ func printTable(_ data: [[String]], withColumnLabels columnLabels: [String]) {
 	}
 }
 
-let data = [
-	["Eva", "30", "6"],
-	["Saleh", "40", "18"],
-	["Amit", "50", "20"]
-]
+struct Person {
+	let name: String
+	let age: Int
+	let yearsOfExperience: Int
+}
 
-printTable(data, withColumnLabels: ["Employee Name", "Age", "Years of Experience"])
+struct Department {
+	let name: String
+	var people = [Person]()
+
+	init(name: String) {
+		self.name = name
+	}
+
+	mutating func add(_ person: Person) {
+		people.append(person)
+	}
+}
+
+
+var department = Department(name: "Engineering")
+department.add(Person(name: "Eva", age: 30, yearsOfExperience: 6))
+department.add(Person(name: "Saleh", age: 40, yearsOfExperience: 18))
+department.add(Person(name: "Amit", age: 50, yearsOfExperience: 6))
