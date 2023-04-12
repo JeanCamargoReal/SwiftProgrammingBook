@@ -24,3 +24,10 @@ intStack.push(2)
 print(String(describing: intStack.pop()))
 print(String(describing: intStack.pop()))
 print(String(describing: intStack.pop()))
+
+var stringStack = Stack<String>()
+
+stringStack.push("this is a string")
+stringStack.push("another string")
+
+print(String(describing: stringStack.pop()))
