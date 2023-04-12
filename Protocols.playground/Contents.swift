@@ -102,3 +102,6 @@ printTable(department)
 
 let operationDataSource: TabularDataSource = Department(name: "Operations")
 let engineeringDataSource = department as TabularDataSource
+
+let mikey = Person(name: "Mikey", age: 37, yearsOfExperience: 10)
+mikey is TabularDataSource
