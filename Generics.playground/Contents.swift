@@ -16,7 +16,7 @@ struct Stack<Element> {
 	}
 }
 
-var intStack = Stack()
+var intStack = Stack<Int>()
 
 intStack.push(1)
 intStack.push(2)
