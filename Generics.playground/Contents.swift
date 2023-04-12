@@ -31,3 +31,13 @@ stringStack.push("this is a string")
 stringStack.push("another string")
 
 print(String(describing: stringStack.pop()))
+
+func myMap<T, U>(_ items: [T], _ txform: (T) -> (U)) -> [U] {
+	var result = [U]()
+
+	for item in items {
+		result.append(f(item))
+	}
+
+	return result
+}
