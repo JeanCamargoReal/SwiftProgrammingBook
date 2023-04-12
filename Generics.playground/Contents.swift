@@ -1,13 +1,13 @@
 import Cocoa
 
-struct Stack {
-	var items = [Int]()
+struct Stack<Element> {
+	var items = [Element]()
 
-	mutating func push(_ newItem: Int) {
+	mutating func push(_ newItem: Element) {
 		items.append(newItem)
 	}
 
-	mutating func pop() -> Int? {
+	mutating func pop() -> Element? {
 		guard !items.isEmpty else {
 			return nil
 		}
