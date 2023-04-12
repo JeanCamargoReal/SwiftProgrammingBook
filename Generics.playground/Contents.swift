@@ -23,3 +23,4 @@ intStack.push(2)
 
 print(String(describing: intStack.pop()))
 print(String(describing: intStack.pop()))
+print(String(describing: intStack.pop()))
