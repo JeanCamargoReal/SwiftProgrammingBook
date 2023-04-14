@@ -47,7 +47,7 @@ stringStack.push("another string")
 
 print(String(describing: stringStack.pop()))
 
-func myMap <T, U> (_ items: [T], _ txform: (T) -> (U)) -> [U] {
+func myMap<T, U> (_ items: [T], _ txform: (T) -> (U)) -> [U] {
 	var result = [U]()
 
 	for item in items {
@@ -61,3 +61,11 @@ let strings = ["one", "two", "three"]
 let stringLengths = myMap(strings) { $0.count }
 
 print(stringLengths)
+
+func checkIfEqual<T: Equatable>(_ first: T, _ second: T) -> Bool {
+	return first == second
+}
+
+print(checkIfEqual(1, 1))
+print(checkIfEqual("a string", "a string"))
+print(checkIfEqual("a string", "a different string"))
