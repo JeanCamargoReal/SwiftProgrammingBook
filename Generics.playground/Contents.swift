@@ -14,6 +14,16 @@ struct Stack<Element> {
 
 		return items.removeLast()
 	}
+
+	func map<U>(_ txform: (Element) -> U) -> Stack<U> {
+		var mappedItems = [U]()
+
+		for item in items {
+			mappedItems.append(txform(item))
+		}
+
+		return Stack<U>(items: mappedItems)
+	}
 }
 
 var intStack = Stack<Int>()
@@ -36,7 +46,7 @@ func myMap <T, U> (_ items: [T], _ txform: (T) -> (U)) -> [U] {
 	var result = [U]()
 
 	for item in items {
-		result.append (txform(item))
+		result.append(txform(item))
 	}
 
 	return result
