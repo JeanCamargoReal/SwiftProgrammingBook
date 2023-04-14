@@ -31,9 +31,14 @@ var intStack = Stack<Int>()
 intStack.push(1)
 intStack.push(2)
 
+var doubleStack = intStack.map { 2 * $0 }
+
 print(String(describing: intStack.pop()))
 print(String(describing: intStack.pop()))
 print(String(describing: intStack.pop()))
+
+//print(String(describing: doubleStack.pop()))
+//print(String(describing: doubleStack.pop()))
 
 var stringStack = Stack<String>()
 
