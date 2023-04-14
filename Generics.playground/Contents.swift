@@ -69,3 +69,12 @@ func checkIfEqual<T: Equatable>(_ first: T, _ second: T) -> Bool {
 print(checkIfEqual(1, 1))
 print(checkIfEqual("a string", "a string"))
 print(checkIfEqual("a string", "a different string"))
+
+func checkIfDescriptionsMatch<T: CustomStringConvertible, U: CustomStringConvertible>(_ first: T, _ second: U) -> Bool {
+
+	return first.description == second.description
+}
+
+print(checkIfDescriptionsMatch(Int(1), UInt(1)))
+print(checkIfDescriptionsMatch(1, 1.0))
+print(checkIfDescriptionsMatch(Float(1.0), Double(1.0)))
