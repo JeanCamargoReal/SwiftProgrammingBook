@@ -90,3 +90,15 @@ func checkIfDescriptionsMatch<T: CustomStringConvertible, U: CustomStringConvert
 print(checkIfDescriptionsMatch(Int(1), UInt(1)))
 print(checkIfDescriptionsMatch(1, 1.0))
 print(checkIfDescriptionsMatch(Float(1.0), Double(1.0)))
+
+var myStack = Stack<Int>()
+
+myStack.push(10)
+myStack.push(20)
+myStack.push(30)
+
+var myStackIterator = StackIterator(stack: myStack)
+
+while let value = myStackIterator.next() {
+	print("got \(value)")
+}
