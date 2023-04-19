@@ -1,5 +1,13 @@
 import Cocoa
 
+struct StackIterator<T>: IteratorProtocol {
+	var stack: Stack<T>
+
+	mutating func next() -> T? {
+		return stack.pop()
+	}
+}
+
 struct Stack<Element> {
 	var items = [Element]()
 
