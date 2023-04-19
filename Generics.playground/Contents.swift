@@ -102,3 +102,7 @@ var myStackIterator = StackIterator(stack: myStack)
 while let value = myStackIterator.next() {
 	print("got \(value)")
 }
+
+for value in myStack {
+	print("for-in loop: got \(value)")
+}
