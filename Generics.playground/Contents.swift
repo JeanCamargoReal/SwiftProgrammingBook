@@ -8,7 +8,7 @@ struct StackIterator<T>: IteratorProtocol {
 	}
 }
 
-struct Stack<Element> {
+struct Stack<Element>: Sequence {
 	var items = [Element]()
 
 	mutating func push(_ newItem: Element) {
@@ -31,6 +31,10 @@ struct Stack<Element> {
 		}
 
 		return Stack<U>(items: mappedItems)
+	}
+
+	func makeIterator() -> StackIterator<Element> {
+		return StackIterator(stack: self)
 	}
 }
 
