@@ -10,7 +10,7 @@ struct EllipticalWorkout: Exercise {
 	var minutes: Double
 }
 
-let elippiticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
+let ellippiticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
 
 struct RunningWorkout: Exercise {
 	var caloriesBurned: Double
@@ -19,3 +19,10 @@ struct RunningWorkout: Exercise {
 }
 
 let runningWorkout = RunningWorkout(caloriesBurned: 350, minutes: 25, meters: 5000)
+
+func caloriesBurnedPerMinute<E: Exercise>(for exercise: E) -> Double {
+	return exercise.caloriesBurned / exercise.minutes
+}
+
+print(caloriesBurnedPerMinute(for: ellippiticalWorkout))
+print(caloriesBurnedPerMinute(for: runningWorkout))
