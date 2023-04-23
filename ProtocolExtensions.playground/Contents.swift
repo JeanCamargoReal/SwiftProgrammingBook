@@ -10,8 +10,11 @@ struct EllipticalWorkout: Exercise {
 	var minutes: Double
 }
 
+let elippiticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
+
 struct RunningWorkout: Exercise {
 	var caloriesBurned: Double
 	var minutes: Double
 }
 
+let runningWorkout = RunningWorkout(caloriesBurned: 350, minutes: 25, meters: 5000)
