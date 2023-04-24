@@ -28,3 +28,15 @@ extension Exercise {
 
 print(ellippiticalWorkout.caloriesBurnedPerMinute)
 print(runningWorkout.caloriesBurnedPerMinute)
+
+extension Exercise {
+	func adding(calories: Double) -> Self {
+		var dupe = self
+		dupe.caloriesBurned += calories
+
+		return dupe
+	}
+}
+
+let ellipticalCopy = ellippiticalWorkout.adding(calories: 50)
+let runningCopy = runningWorkout.adding(calories: 100)
