@@ -10,7 +10,7 @@ struct EllipticalWorkout: Exercise {
 	var minutes: Double
 }
 
-let ellippiticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
+let ellipiticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
 
 struct RunningWorkout: Exercise {
 	var caloriesBurned: Double
@@ -26,7 +26,7 @@ extension Exercise {
 	}
 }
 
-print(ellippiticalWorkout.caloriesBurnedPerMinute)
+print(ellipiticalWorkout.caloriesBurnedPerMinute)
 print(runningWorkout.caloriesBurnedPerMinute)
 
 extension Exercise {
@@ -39,7 +39,7 @@ extension Exercise {
 	}
 }
 
-let ellipticalCopy = ellippiticalWorkout.adding(calories: 50)
+let ellipticalCopy = ellipiticalWorkout.adding(calories: 50)
 let runningCopy = runningWorkout.adding(calories: 100)
 
 extension Sequence where Element == Exercise {
@@ -53,3 +53,7 @@ extension Sequence where Element == Exercise {
 		return total
 	}
 }
+
+let mondayWorkout: [Exercise] = [ellipiticalWorkout, runningWorkout]
+
+print(mondayWorkout.totalColoriesBurned())
