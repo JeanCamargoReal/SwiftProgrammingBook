@@ -1,6 +1,6 @@
 import Cocoa
 
-protocol Exercise {
+protocol Exercise: CustomStringConvertible {
 	var caloriesBurned: Double { get set }
 	var minutes: Double { get set }
 }
