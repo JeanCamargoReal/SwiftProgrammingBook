@@ -34,6 +34,8 @@ extension Exercise {
 
 print(ellipiticalWorkout.caloriesBurnedPerMinute)
 print(runningWorkout.caloriesBurnedPerMinute)
+print(ellipiticalWorkout)
+print(runningWorkout)
 
 extension Exercise {
 	func adding(calories: Double) -> Self {
