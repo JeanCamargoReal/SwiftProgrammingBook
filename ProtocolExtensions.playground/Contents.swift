@@ -22,6 +22,10 @@ struct RunningWorkout: Exercise {
 	var caloriesBurned: Double
 	var minutes: Double
 	var meters: Double
+
+	var description: String {
+		return "RunningWorkout(\(caloriesBurned) calories and \(meters)m in \(minutes) minutes)"
+	}
 }
 
 let runningWorkout = RunningWorkout(caloriesBurned: 350, minutes: 25, meters: 5000)
