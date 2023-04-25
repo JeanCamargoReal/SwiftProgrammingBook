@@ -22,4 +22,11 @@ class Lexer {
 		self.input = input
 		self.position = input.startIndex
 	}
+
+	func peek() -> Character? {
+		guard position < input.endIndex else {
+			return nil
+		}
+		return input[position]
+	}
 }
