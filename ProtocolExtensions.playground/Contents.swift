@@ -5,6 +5,12 @@ protocol Exercise: CustomStringConvertible {
 	var minutes: Double { get set }
 }
 
+extension Exercise {
+	var description: String {
+		return "Exercise(\(Self.self), burned \(caloriesBurned) calories in \(minutes) minutes)"
+	}
+}
+
 struct EllipticalWorkout: Exercise {
 	var caloriesBurned: Double
 	var minutes: Double
