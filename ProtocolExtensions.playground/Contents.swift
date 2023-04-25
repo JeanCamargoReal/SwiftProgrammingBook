@@ -33,6 +33,7 @@ extension Exercise {
 	func adding(calories: Double) -> Self {
 		var dupe = self
 		dupe.caloriesBurned += calories
+		print("Creating a new \(Self.self) with \(dupe.caloriesBurned) cal burned")
 
 		return dupe
 	}
@@ -40,3 +41,4 @@ extension Exercise {
 
 let ellipticalCopy = ellippiticalWorkout.adding(calories: 50)
 let runningCopy = runningWorkout.adding(calories: 100)
+
