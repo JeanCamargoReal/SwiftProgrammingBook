@@ -13,3 +13,13 @@ enum Token: CustomStringConvertible {
 		}
 	}
 }
+
+class Lexer {
+	let input: String
+	var position: String.Index
+
+	init(input: String) {
+		self.input = input
+		self.position = input.startIndex
+	}
+}
