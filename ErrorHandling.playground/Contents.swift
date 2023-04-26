@@ -29,4 +29,8 @@ class Lexer {
 		}
 		return input[position]
 	}
+
+	func advance() {
+		position = input.index(after: position)
+	}
 }
