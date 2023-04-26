@@ -31,6 +31,8 @@ class Lexer {
 	}
 
 	func advance() {
+		assert(position < input.endIndex, "Cannot advance past endIndex!")
+		
 		position = input.index(after: position)
 	}
 }
