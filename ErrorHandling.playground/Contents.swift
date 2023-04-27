@@ -15,7 +15,7 @@ enum Token: CustomStringConvertible {
 }
 
 class Lexer {
-	enum Error {
+	enum Error: Swift.Error {
 		case invalidCharacter(Character)
 	}
 
