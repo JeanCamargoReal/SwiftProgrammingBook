@@ -106,4 +106,4 @@ func evaluate(_ input: String) {
 }
 
 evaluate("10 + 3 + 5")
-evaluate("1 + 2 + three")
+//evaluate("1 + 2 + three")
