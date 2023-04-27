@@ -15,6 +15,27 @@ enum Token: CustomStringConvertible {
 }
 
 class Lexer {
+	func getNumber() -> Int {
+		var value = 0
+
+		while let nextCharacter = peek() {
+			switch nextCharacter {
+				case "0" ... "9":
+					// Another digit - add it into value
+					let digitValue = Int(String(nextCharacter))!
+
+					value = 10 * value + digitValue
+
+					advance()
+
+				default:
+					// Something unexpected - need to send back and error
+					return value
+			}
+		}
+		return value
+	}
+
 	enum Error: Swift.Error {
 		case invalidCharacter(Character)
 	}
@@ -47,7 +68,9 @@ class Lexer {
 			switch nextCharacter {
 				case "0" ... "9":
 					// Start of a number - need to grab the rest
-					break // TODO: replace this with real work
+					let value = getNumber()
+
+					tokens.append(.number(value))
 
 				case "+":
 					tokens.append(.plus)
