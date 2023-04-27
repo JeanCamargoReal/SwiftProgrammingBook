@@ -59,7 +59,7 @@ class Lexer {
 
 				default:
 					// Something unexpected - need to send back an error
-					break // TODO: replace this with real work
+					throw Lexer.Error.invalidCharacter(nextCharacter)
 			}
 		}
 		return tokens
