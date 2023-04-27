@@ -15,6 +15,10 @@ enum Token: CustomStringConvertible {
 }
 
 class Lexer {
+	enum Error {
+		case invalidCharacter(Character)
+	}
+
 	let input: String
 	var position: String.Index
 
