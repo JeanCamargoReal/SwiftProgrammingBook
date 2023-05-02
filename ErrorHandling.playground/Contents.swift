@@ -126,7 +126,26 @@ class Parser {
 		}
 	}
 
-	
+	func parse() throws -> Int {
+		// Require a number first
+		var value = try getNumber()
+
+		while let token = getNextToken() {
+			switch token {
+
+				// Getting a plus after a number is legal
+				case .plus:
+					// After a plus, we must get another number
+					let nextNumber = try getNumber()
+					value += nextNumber
+
+					// Getting a number after a number is not legal
+				case .number:
+					throw Parser.Error.invalidToken(token)
+			}
+		}
+		return value
+	}
 }
 
 func evaluate(_ input: String) {
