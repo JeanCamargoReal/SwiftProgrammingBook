@@ -10,7 +10,7 @@ import Foundation
 class Asset {
 	let name: String
 	let value: Double
-	var container: Vault?
+	weak var container: Vault?
 
 	init(name: String, value: Double) {
 		self.name = name

@@ -27,4 +27,5 @@ class Simulation {
 let simulation = Simulation()
 
 simulation.run()
+dispatchMain()
 
