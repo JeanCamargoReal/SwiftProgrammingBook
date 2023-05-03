@@ -11,6 +11,8 @@ class Vault {
 	let number: Int
 
 	private(set) var assets = [Asset]()
+	var totalValue: Double = 0
+	#warning("Implement totalValue as a computed property")
 
 	init(number: Int) {
 		self.number = number
