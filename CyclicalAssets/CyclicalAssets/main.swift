@@ -7,5 +7,15 @@
 
 import Foundation
 
-print("Hello, World!")
+class Simulation {
+	func run() {
+		let vault13 = Vault(number: 13)
+
+		print("Created \(vault13)")
+	}
+}
+
+let simulation = Simulation()
+
+simulation.run()
 
