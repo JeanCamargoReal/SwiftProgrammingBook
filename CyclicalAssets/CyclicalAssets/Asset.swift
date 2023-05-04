@@ -21,7 +21,7 @@ class Asset {
 
 	var changeHandler: ValueChangeHandler = {_ in}
 
-	init(name: String, value: Double, changeHandler: ValueChangeHandler = {_ in}) {
+	init(name: String, value: Double, changeHandler: @escaping ValueChangeHandler = {_ in}) {
 		self.name = name
 		self.value = value
 		self.changeHandler = changeHandler
