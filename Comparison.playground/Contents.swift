@@ -1,6 +1,6 @@
 import Cocoa
 
-struct Point: {
+struct Point: Equatable {
 	let x: Int
 	let y: Int
 	let label: String? = nil
