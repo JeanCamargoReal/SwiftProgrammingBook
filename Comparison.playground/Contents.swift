@@ -9,6 +9,7 @@ struct Point {
 let a = Point(x: 3, y: 4)
 let b = Point(x: 3, y: 4)
 let abEqual = (a == b)
+let abNotEqual = (a != b)
 
 extension Point: Equatable {
 	static func == (lhs: Point, rhs: Point) -> Bool {
