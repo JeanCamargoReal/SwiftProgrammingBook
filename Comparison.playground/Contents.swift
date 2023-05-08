@@ -22,6 +22,15 @@ let pointRange = c..<d
 pointRange.contains(a)
 pointRange.contains(Point(x: -1, y: -1))
 
+let points: Set = [a, b, c]
+
+points.intersection([b, c, d])
+
+let pointNames: [Point:String] = [
+	Point(x: 0, y: 0): "origin",
+	a: "a"
+]
+
 extension Point: Comparable {
 
 	static func < (lhs: Point, rhs: Point) -> Bool {
