@@ -31,7 +31,7 @@ let pointNames: [Point:String] = [
 	a: "a"
 ]
 
-extension Point: Comparable {
+extension Point: Comparable, Hashable {
 
 	static func < (lhs: Point, rhs: Point) -> Bool {
 		return (lhs.x < rhs.x) && (lhs.y < rhs.y)
