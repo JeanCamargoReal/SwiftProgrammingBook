@@ -40,4 +40,9 @@ extension Point: Comparable, Hashable {
 	static func == (lhs: Point, rhs: Point) -> Bool {
 		return (lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.label == rhs.label)
 	}
+
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(x)
+		hasher.combine(y)
+	}
 }
