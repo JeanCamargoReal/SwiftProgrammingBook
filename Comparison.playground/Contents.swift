@@ -22,7 +22,7 @@ let pointRange = c..<d
 pointRange.contains(a)
 pointRange.contains(Point(x: -1, y: -1))
 
-extension Point: Equatable, Comparable {
+extension Point: Comparable {
 
 	static func < (lhs: Point, rhs: Point) -> Bool {
 		return (lhs.x < rhs.x) && (lhs.y < rhs.y)
