@@ -17,6 +17,10 @@ let cLessThanD = (c < d)
 let cLessThanEqualD = (c <= d)
 let cGreaterThanD = (c > d)
 let cGreaterThanEqualD = (c >= d)
+let pointRange = c..<d
+
+pointRange.contains(a)
+pointRange.contains(Point(x: -1, y: -1))
 
 extension Point: Equatable, Comparable {
 
